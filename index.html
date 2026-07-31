@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKN UNISNU - Desa Semat XXI</title>
+    <meta name="description" content="Website resmi Kuliah Kerja Nyata (KKN) UNISNU Angkatan XXI di Desa Semat, Kecamatan Tahunan, Kabupaten Jepara.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky 500
+                        'primary-dark': '#0284c7', // Sky 600
+                        secondary: '#0f172a', // Slate 900
+                        sand: '#fdf6e3',
+                        'sand-dark': '#eaddb6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Icons (Phosphor Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-white/70 border-b border-white/20 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/30">
+                        <i class="ph ph-anchor text-white text-2xl"></i>
+                    </div>
+                    <span class="font-heading font-bold text-xl tracking-tight text-secondary">KKN Semat<span class="text-primary">.</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-slate-600 hover:text-primary font-medium transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-slate-600 hover:text-primary font-medium transition-colors">Tentang</a>
+                    <a href="#kegiatan" class="text-slate-600 hover:text-primary font-medium transition-colors">Kegiatan</a>
+                    <a href="#galeri" class="text-slate-600 hover:text-primary font-medium transition-colors">Galeri</a>
+                    <a href="#tim" class="text-slate-600 hover:text-primary font-medium transition-colors">Tim</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-xl absolute w-full border-t border-slate-100">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#beranda" class="block px-3 py-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium mobile-link">Beranda</a>
+                <a href="#tentang" class="block px-3 py-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium mobile-link">Tentang</a>
+                <a href="#kegiatan" class="block px-3 py-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium mobile-link">Kegiatan</a>
+                <a href="#galeri" class="block px-3 py-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium mobile-link">Galeri</a>
+                <a href="#tim" class="block px-3 py-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium mobile-link">Tim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0 bg-slate-900">
+            <!-- Using Unsplash High Quality Image of beach/ocean -->
+            <img src="https://images.unsplash.com/photo-1596395819057-cb37332c9ce6?q=80&w=2070&auto=format&fit=crop" alt="Pantai Desa Semat" class="w-full h-full object-cover object-center opacity-60" />
+            <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/70 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-2xl animate-fade-in-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-6 shadow-xl">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Angkatan XXI - 2026
+                </div>
+                <h1 class="text-4xl md:text-6xl font-heading font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
+                    Mengabdi untuk <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-300">Desa Pesisir</span> yang<br>Mandiri & Sejahtera.
+                </h1>
+                <p class="text-lg text-slate-200 mb-8 max-w-xl leading-relaxed">
+                    Website resmi rekapitulasi kegiatan dan dokumentasi Kuliah Kerja Nyata (KKN) Mahasiswa Universitas Islam Nahdlatul Ulama (UNISNU) di Desa Semat, Kecamatan Tahunan, Kabupaten Jepara.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#kegiatan" class="px-8 py-4 rounded-xl bg-primary hover:bg-primary-dark text-white font-semibold transition-all shadow-lg shadow-primary/30 flex items-center gap-2 hover:-translate-y-1">
+                        Lihat Kegiatan <i class="ph-bold ph-arrow-right"></i>
+                    </a>
+                    <a href="#tentang" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-semibold transition-all flex items-center gap-2 hover:-translate-y-1">
+                        <i class="ph-bold ph-info"></i> Tentang Desa
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+            <a href="#tentang" class="w-10 h-14 rounded-full border-2 border-white/30 flex items-start justify-center p-2 hover:border-white/70 transition-colors bg-secondary/30 backdrop-blur-sm">
+                <div class="w-1.5 h-3 bg-white rounded-full mt-1"></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Tentang Section -->
+    <section id="tentang" class="py-24 bg-white relative overflow-hidden">
+        <!-- Decorative blob -->
+        <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-[500px] h-[500px] bg-sand rounded-full blur-3xl opacity-50 z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1582298538104-e59392d4f8f4?q=80&w=1974&auto=format&fit=crop" alt="Desa Semat" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent flex flex-col justify-end p-8">
+                            <h3 class="text-2xl font-heading font-bold text-white mb-2">Desa Semat, Jepara</h3>
+                            <p class="text-white/90 flex items-center"><i class="ph-fill ph-map-pin mr-2 text-primary"></i>Kecamatan Tahunan</p>
+                        </div>
+                    </div>
+                    <!-- Floating card -->
+                    <div class="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 max-w-xs hidden md:block animate-float z-20">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl">
+                                <i class="ph-fill ph-users-three"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary text-lg leading-none mb-1">15 Mahasiswa</h4>
+                                <p class="text-sm text-slate-500">Lintas Program Studi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
+                        <i class="ph-bold ph-compass"></i> Tentang Desa
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold text-secondary mb-6 leading-tight">
+                        Potensi Pesisir yang <span class="text-primary">Luar Biasa.</span>
+                    </h2>
+                    <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+                        Desa Semat adalah desa pesisir yang terletak di Kecamatan Tahunan, Kabupaten Jepara. Memiliki potensi kelautan dan pariwisata pantai yang indah, serta masyarakat yang ramah dan berjiwa gotong royong tinggi.
+                    </p>
+                    <p class="text-slate-600 mb-10 text-lg leading-relaxed">
+                        Melalui program KKN ini, kami berkolaborasi dengan masyarakat setempat untuk mengembangkan potensi UMKM, kebersihan lingkungan pesisir, edukasi digital, dan pemberdayaan masyarakat.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="p-6 rounded-2xl bg-white shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:border-primary/30 transition-all hover:-translate-y-1">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                                <i class="ph-fill ph-fish text-2xl text-primary"></i>
+                            </div>
+                            <h4 class="font-bold text-secondary text-lg mb-2">Potensi Laut</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Pengembangan pariwisata pantai dan pemanfaatan hasil budidaya pesisir.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 hover:border-primary/30 transition-all hover:-translate-y-1">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                                <i class="ph-fill ph-storefront text-2xl text-primary"></i>
+                            </div>
+                            <h4 class="font-bold text-secondary text-lg mb-2">UMKM Mandiri</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Pendampingan branding dan pemasaran digital ekonomi kreatif warga.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Kegiatan -->
+    <section id="kegiatan" class="py-24 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+                    <i class="ph-bold ph-calendar-check"></i> Log Kegiatan
+                </div>
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-secondary mb-4">Rekap Berita Kegiatan</h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">Jurnal perjalanan dan dokumentasi program kerja yang telah kami laksanakan di Desa Semat.</p>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative wrap overflow-hidden p-2 h-full">
+                <!-- Vertical Line -->
+                <div class="absolute border-opacity-20 border-slate-400 h-full border-l-2 left-8 md:left-1/2 transform md:-translate-x-1/2"></div>
+                
+                <!-- Item 1 (Right) -->
+                <div class="mb-12 flex justify-between items-center w-full md:flex-row flex-col">
+                    <div class="order-1 md:w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-primary shadow-lg shadow-primary/40 w-12 h-12 rounded-full absolute left-8 md:left-1/2 transform -translate-x-1/2 justify-center border-4 border-slate-50">
+                        <i class="ph-bold ph-check text-white text-lg"></i>
+                    </div>
+                    <div class="order-1 bg-white rounded-3xl shadow-sm border border-slate-100 w-full md:w-5/12 p-6 pl-20 md:pl-6 ml-0 transition-all hover:shadow-md hover:-translate-y-1">
+                        <div class="flex flex-wrap items-center gap-2 mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 bg-sand text-yellow-800 rounded-md">12 Agustus 2026</span>
+                            <span class="text-xs font-bold px-2.5 py-1 bg-primary/10 text-primary rounded-md">Program Kerja</span>
+                        </div>
+                        <h3 class="font-bold font-heading text-xl text-secondary mb-2">Penyuluhan Digital Marketing UMKM Terasi</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Melakukan pendampingan pembuatan kemasan modern dan pendaftaran lokasi usaha di Google Maps untuk pelaku UMKM lokal pembuatan terasi Semat.</p>
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop" alt="UMKM" class="w-full h-48 object-cover rounded-2xl" />
+                    </div>
+                </div>
+
+                <!-- Item 2 (Left) -->
+                <div class="mb-12 flex justify-between flex-row-reverse items-center w-full md:flex-row-reverse flex-col">
+                    <div class="order-1 md:w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-white border-4 border-slate-50 shadow-md w-12 h-12 rounded-full absolute left-8 md:left-1/2 transform -translate-x-1/2 justify-center">
+                        <div class="w-4 h-4 bg-primary rounded-full"></div>
+                    </div>
+                    <div class="order-1 bg-white rounded-3xl shadow-sm border border-slate-100 w-full md:w-5/12 p-6 pl-20 md:pr-6 md:pl-6 ml-0 md:text-right transition-all hover:shadow-md hover:-translate-y-1">
+                        <div class="flex flex-wrap items-center gap-2 mb-3 md:justify-end">
+                            <span class="text-xs font-bold px-2.5 py-1 bg-primary/10 text-primary rounded-md">Sosial Lingkungan</span>
+                            <span class="text-xs font-bold px-2.5 py-1 bg-sand text-yellow-800 rounded-md">10 Agustus 2026</span>
+                        </div>
+                        <h3 class="font-bold font-heading text-xl text-secondary mb-2">Kerja Bakti Bersih Pantai Semat</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Berkolaborasi dengan pemuda desa dan Karang Taruna untuk membersihkan area pesisir pantai dari sampah plastik kiriman agar lebih indah dan nyaman dikunjungi.</p>
+                        <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80fbfc9?q=80&w=2070&auto=format&fit=crop" alt="Bersih pantai" class="w-full h-48 object-cover rounded-2xl" />
+                    </div>
+                </div>
+
+                <!-- Item 3 (Right) -->
+                <div class="mb-12 flex justify-between items-center w-full md:flex-row flex-col">
+                    <div class="order-1 md:w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-white border-4 border-slate-50 shadow-md w-12 h-12 rounded-full absolute left-8 md:left-1/2 transform -translate-x-1/2 justify-center">
+                        <div class="w-4 h-4 bg-slate-300 rounded-full"></div>
+                    </div>
+                    <div class="order-1 bg-white rounded-3xl shadow-sm border border-slate-100 w-full md:w-5/12 p-6 pl-20 md:pl-6 ml-0 transition-all hover:shadow-md hover:-translate-y-1">
+                        <div class="flex flex-wrap items-center gap-2 mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 bg-sand text-yellow-800 rounded-md">01 Agustus 2026</span>
+                            <span class="text-xs font-bold px-2.5 py-1 bg-primary/10 text-primary rounded-md">Penerjunan</span>
+                        </div>
+                        <h3 class="font-bold font-heading text-xl text-secondary mb-2">Upacara Penerimaan Mahasiswa KKN</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Disambut hangat oleh Bapak Petinggi (Kepala Desa) Semat beserta jajaran perangkat desa di Balai Desa Semat. Menandai dimulainya masa pengabdian kami selama 40 hari ke depan.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="px-8 py-4 rounded-xl bg-white border-2 border-slate-200 text-slate-700 font-bold hover:bg-slate-50 hover:border-slate-300 transition-all inline-flex items-center gap-2 shadow-sm">
+                    <i class="ph-bold ph-spinner-gap animate-spin hidden"></i> Muat Lebih Banyak Berita
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="galeri" class="py-24 bg-secondary text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-primary-300 text-sm font-semibold mb-4 border border-white/10">
+                        <i class="ph-bold ph-image"></i> Dokumentasi
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4">Galeri KKN Semat</h2>
+                    <p class="text-slate-400 text-lg">Momen-momen berharga dan aktivitas seru selama mengabdi di Desa Semat.</p>
+                </div>
+                <div class="flex gap-3">
+                    <button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="ph-bold ph-arrow-left text-xl"></i></button>
+                    <button class="w-12 h-12 rounded-full bg-primary flex items-center justify-center hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20"><i class="ph-bold ph-arrow-right text-xl text-white"></i></button>
+                </div>
+            </div>
+
+            <!-- Custom Masonry/Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
+                <!-- Large landscape image -->
+                <div class="col-span-1 md:col-span-2 row-span-2 rounded-3xl overflow-hidden relative group cursor-pointer border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Pantai" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h4 class="font-bold text-2xl mb-1">Survei Pantai Semat</h4>
+                            <p class="text-slate-300">Potensi wisata unggulan desa.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portrait image -->
+                <div class="col-span-1 md:col-span-1 row-span-2 rounded-3xl overflow-hidden relative group cursor-pointer border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1932&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Teman" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <h4 class="font-bold text-xl">Keakraban Tim</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-1 md:col-span-1 row-span-1 rounded-3xl overflow-hidden relative group cursor-pointer border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1576085898323-218337e3e43c?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Mengajar" />
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="ph-fill ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+                
+                <div class="col-span-1 md:col-span-1 row-span-1 rounded-3xl overflow-hidden relative group cursor-pointer border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Desa" />
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="ph-fill ph-magnifying-glass-plus text-4xl text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tim Section (Biodata Anggota) -->
+    <section id="tim" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+                    <i class="ph-bold ph-users"></i> Biodata Anggota
+                </div>
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-secondary mb-4">Tim KKN Desa Semat</h2>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto">Kami berasal dari berbagai program studi, disatukan untuk memberikan kontribusi dan dedikasi terbaik bagi masyarakat Desa Semat.</p>
+            </div>
+
+            <!-- Grid Profil -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Kormades -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 text-center group hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)]">
+                    <div class="relative w-36 h-36 mx-auto mb-6">
+                        <div class="absolute inset-0 bg-primary/20 rounded-full blur-lg transform group-hover:scale-125 transition-transform duration-500"></div>
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1887&auto=format&fit=crop" alt="Foto Kormades" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-md z-10" />
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-primary text-white text-xs font-bold px-4 py-1.5 rounded-full border-2 border-white z-20 shadow-sm whitespace-nowrap">Kormades</div>
+                    </div>
+                    <h3 class="font-bold font-heading text-xl text-secondary mb-1">Ahmad Rofiq</h3>
+                    <p class="text-sm font-medium text-slate-500 mb-5">Teknik Informatika</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-white hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 transition-all shadow-sm"><i class="ph-fill ph-instagram-logo text-lg"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-white hover:bg-[#0A66C2] transition-all shadow-sm"><i class="ph-fill ph-linkedin-logo text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Anggota 2 -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 text-center group hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)]">
+                    <div class="relative w-36 h-36 mx-auto mb-6">
+                        <div class="absolute inset-0 bg-primary/20 rounded-full blur-lg transform group-hover:scale-125 transition-transform duration-500"></div>
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop" alt="Foto Sekretaris" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-md z-10" />
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-secondary text-white text-xs font-bold px-4 py-1.5 rounded-full border-2 border-white z-20 shadow-sm whitespace-nowrap">Sekretaris</div>
+                    </div>
+                    <h3 class="font-bold font-heading text-xl text-secondary mb-1">Siti Aminah</h3>
+                    <p class="text-sm font-medium text-slate-500 mb-5">Manajemen</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-white hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 transition-all shadow-sm"><i class="ph-fill ph-instagram-logo text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Anggota 3 -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 text-center group hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)]">
+                    <div class="relative w-36 h-36 mx-auto mb-6">
+                        <div class="absolute inset-0 bg-primary/20 rounded-full blur-lg transform group-hover:scale-125 transition-transform duration-500"></div>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop" alt="Foto Bendahara" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-md z-10" />
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-secondary text-xs font-bold px-4 py-1.5 rounded-full border-2 border-white z-20 shadow-sm whitespace-nowrap">Bendahara</div>
+                    </div>
+                    <h3 class="font-bold font-heading text-xl text-secondary mb-1">Budi Santoso</h3>
+                    <p class="text-sm font-medium text-slate-500 mb-5">Akuntansi</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-white hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 transition-all shadow-sm"><i class="ph-fill ph-instagram-logo text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Anggota 4 -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 text-center group hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)]">
+                    <div class="relative w-36 h-36 mx-auto mb-6">
+                        <div class="absolute inset-0 bg-primary/20 rounded-full blur-lg transform group-hover:scale-125 transition-transform duration-500"></div>
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1770&auto=format&fit=crop" alt="Foto Humas" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-md z-10" />
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-slate-700 text-white text-xs font-bold px-4 py-1.5 rounded-full border-2 border-white z-20 shadow-sm whitespace-nowrap">Humas</div>
+                    </div>
+                    <h3 class="font-bold font-heading text-xl text-secondary mb-1">Rina Wijaya</h3>
+                    <p class="text-sm font-medium text-slate-500 mb-5">Ilmu Komunikasi</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-white hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 transition-all shadow-sm"><i class="ph-fill ph-instagram-logo text-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Note -->
+            <div class="mt-16 text-center">
+                <div class="inline-block p-4 rounded-xl bg-slate-50 border border-slate-100">
+                    <p class="text-slate-500 text-sm"><i class="ph-fill ph-info text-primary mr-1"></i> Data di atas adalah contoh. Anda dapat menambahkan anggota lainnya dengan meng-copy kode HTML profil yang ada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary pt-20 pb-8 border-t border-white/10 relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-primary/10 to-transparent z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 text-white/80">
+                <div class="col-span-1 md:col-span-5">
+                    <div class="flex items-center gap-2 mb-6 cursor-pointer" onclick="window.scrollTo(0,0)">
+                        <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+                            <i class="ph ph-anchor text-white text-3xl"></i>
+                        </div>
+                        <span class="font-heading font-bold text-3xl text-white">KKN Semat<span class="text-primary">.</span></span>
+                    </div>
+                    <p class="mb-8 max-w-sm leading-relaxed text-slate-400 text-lg">
+                        Dokumentasi resmi kegiatan Kuliah Kerja Nyata (KKN) Mahasiswa UNISNU Angkatan XXI di Desa Semat, Jepara. Mengabdi dengan sepenuh hati.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary hover:-translate-y-1 transition-all text-xl"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary hover:-translate-y-1 transition-all text-xl"><i class="ph-fill ph-youtube-logo"></i></a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary hover:-translate-y-1 transition-all text-xl"><i class="ph-fill ph-tiktok-logo"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-span-1 md:col-span-3 md:col-start-7">
+                    <h4 class="text-white font-bold font-heading text-xl mb-6">Navigasi</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#beranda" class="text-slate-400 hover:text-white hover:translate-x-2 transition-all inline-block">Beranda</a></li>
+                        <li><a href="#tentang" class="text-slate-400 hover:text-white hover:translate-x-2 transition-all inline-block">Tentang Desa</a></li>
+                        <li><a href="#kegiatan" class="text-slate-400 hover:text-white hover:translate-x-2 transition-all inline-block">Log Kegiatan</a></li>
+                        <li><a href="#galeri" class="text-slate-400 hover:text-white hover:translate-x-2 transition-all inline-block">Galeri Foto</a></li>
+                        <li><a href="#tim" class="text-slate-400 hover:text-white hover:translate-x-2 transition-all inline-block">Tim Kami</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-span-1 md:col-span-3">
+                    <h4 class="text-white font-bold font-heading text-xl mb-6">Lokasi Posko</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                                <i class="ph-fill ph-map-pin text-primary text-xl"></i>
+                            </div>
+                            <span class="text-slate-400 pt-2">Balai Desa Semat, Kec. Tahunan, Kab. Jepara, Jawa Tengah</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                                <i class="ph-fill ph-envelope-simple text-primary text-xl"></i>
+                            </div>
+                            <span class="text-slate-400">kknsemat@unisnu.ac.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+                <p>&copy; 2026 Tim KKN UNISNU Desa Semat XXI. Dibuat dengan <i class="ph-fill ph-heart text-red-500 mx-1"></i> di Jepara.</p>
+                <p class="flex items-center gap-2">Hosted on <i class="ph-fill ph-github-logo text-lg text-white"></i> GitHub Pages</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
