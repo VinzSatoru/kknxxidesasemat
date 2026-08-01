@@ -65,3 +65,49 @@ html {
         transform: translateX(-50%);
     }
 }
+
+/* Modal Animations */
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+#news-modal.active {
+    display: flex;
+    animation: modalFadeIn 0.3s ease forwards;
+}
+
+#news-modal.active .modal-content {
+    animation: modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+#news-modal.closing {
+    animation: modalFadeIn 0.2s ease reverse forwards;
+}
+
+/* Lock body scroll when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Modal gallery image hover */
+.modal-gallery-img {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-gallery-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
