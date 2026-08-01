@@ -99,6 +99,54 @@ const newsData = {
             // Tambahkan path foto tambahan di sini
         ]
     },
+    'berita-day1b': {
+        title: 'Selametan di Posko KKN',
+        date: '27 Juli 2026',
+        category: 'Tradisi',
+        heroImg: 'assets/images/day 1 selametan di posko pada malam hari setelah penerjunan - dihadiri oleh petinggi.png',
+        description: `
+            <p class="mb-4">Pada malam hari setelah penerjunan, seluruh anggota Tim KKN Desa Semat mengadakan acara <strong>selametan</strong> di posko sebagai bentuk rasa syukur dan permohonan doa keselamatan selama menjalankan tugas pengabdian.</p>
+            <p class="mb-4">Acara ini dihadiri langsung oleh Bapak Petinggi (Kepala Desa) Semat yang turut memberikan doa restu dan nasihat kepada seluruh mahasiswa agar dapat beradaptasi dengan baik bersama masyarakat desa.</p>
+            <p>Suasana yang hangat dan penuh kebersamaan ini menjadi awal yang baik bagi perjalanan KKN kami. Tradisi selametan ini juga menjadi simbol penghormatan terhadap budaya lokal masyarakat Desa Semat.</p>
+        `,
+        gallery: []
+    },
+    'berita-day2b': {
+        title: 'Pemasangan Penunjuk Arah Posko',
+        date: '28 Juli 2026',
+        category: 'Persiapan',
+        heroImg: 'assets/images/day 2 pemasangan penunjuk arah posko pada malam hari setelah pembukaan.png',
+        description: `
+            <p class="mb-4">Setelah acara pembukaan resmi di siang hari, pada malam harinya tim KKN langsung berinisiatif untuk memasang <strong>papan penunjuk arah</strong> menuju posko KKN di beberapa titik strategis di area desa.</p>
+            <p class="mb-4">Pemasangan ini bertujuan agar warga desa, tamu, maupun Dosen Pembimbing Lapangan (DPL) dapat dengan mudah menemukan lokasi posko. Papan penunjuk didesain dengan sederhana namun jelas dan informatif.</p>
+            <p>Kegiatan ini dilakukan secara gotong royong oleh seluruh anggota tim dan menjadi salah satu langkah awal membangun kehadiran KKN di tengah masyarakat Desa Semat.</p>
+        `,
+        gallery: []
+    },
+    'berita-day4': {
+        title: 'Kunjungan & Observasi di SDN 01 Semat',
+        date: '30 Juli 2026',
+        category: 'Observasi',
+        heroImg: 'assets/images/Day 4 kunjungan dan observasi di SDN 01 Semat - 30 juli .png',
+        description: `
+            <p class="mb-4">Tim KKN UNISNU melakukan kunjungan resmi dan observasi ke <strong>SDN 01 Semat</strong> untuk mengenal lebih dekat kondisi lingkungan sekolah, fasilitas belajar, serta kebutuhan siswa dan guru.</p>
+            <p class="mb-4">Hasil observasi ini menjadi dasar perencanaan program-program edukasi yang akan dilaksanakan selama masa KKN, seperti Rumah Belajar Semat Cerdas, senam bersama, dan kegiatan literasi lainnya.</p>
+            <p>Pihak sekolah menyambut baik kedatangan tim KKN dan menyatakan kesiapan untuk berkolaborasi demi kemajuan pendidikan anak-anak Desa Semat.</p>
+        `,
+        gallery: []
+    },
+    'berita-day5': {
+        title: 'Senam Bersama di SDN 01 Semat',
+        date: '31 Juli 2026',
+        category: 'Program Kerja',
+        heroImg: 'assets/images/day 5 senam bersama di sdn 01 semat.png',
+        description: `
+            <p class="mb-4">Sebagai tindak lanjut dari hasil observasi, Tim KKN mengadakan kegiatan <strong>senam pagi bersama</strong> dengan siswa-siswi SDN 01 Semat. Kegiatan ini bertujuan untuk mempererat keakraban sekaligus membangun kebiasaan hidup sehat sejak dini.</p>
+            <p class="mb-4">Antusiasme para siswa sangat tinggi. Mereka mengikuti gerakan senam dengan penuh semangat dan ceria. Kegiatan ini juga menjadi ice-breaking yang efektif sebelum memulai sesi belajar di kelas.</p>
+            <p>Senam bersama ini direncanakan menjadi kegiatan rutin setiap pagi selama masa KKN berlangsung, sebagai bagian dari program pembinaan kesehatan jasmani untuk anak-anak desa.</p>
+        `,
+        gallery: []
+    },
 };
 
 // =====================================================
